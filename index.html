@@ -1,0 +1,3312 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devine Arts and Crafts – Gallery of Adam Thabane Malefofane</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore the professional artwork, creative expression, and cultural craftsmanship of Adam Thabane Malefofane at Devine Arts and Crafts. A fusion of tradition, emotion, and artistry.">
+  <meta name="keywords" content="Adam Thabane Malefofane, Devine Arts, Art Gallery, African Art, Crafts, Paintings, Sculpture, Creative Works, South African Artist, Cultural Art">
+  <meta name="author" content="Adam Thabane Malefofane">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Devine Arts and Crafts – Artwork by Adam Thabane Malefofane">
+  <meta property="og:description" content="Experience the art and craftsmanship of Adam Thabane Malefofane — blending creativity, heritage, and emotion in every piece.">
+  <meta property="og:image" content="images/favicon.png">
+  <meta property="og:url" content="https://www.yourdomain.co.za/"> <!-- replace with actual domain -->
+  <meta property="og:site_name" content="Devine Arts and Crafts">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devine Arts and Crafts – Gallery of Adam Thabane Malefofane">
+  <meta name="twitter:description" content="Discover the creative journey of artist Adam Thabane Malefofane at Devine Arts and Crafts.">
+  <meta name="twitter:image" content="images/favicon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #212529;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out, transform 20s ease-in-out;
+            transform: scale(1);
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.6) 0%, rgba(52, 73, 94, 0.4) 100%);
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .hero-overlay {
+                background: linear-gradient(180deg, rgba(44, 62, 80, 0.5) 0%, rgba(52, 73, 94, 0.3) 40%, transparent 70%);
+            }
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 3;
+            opacity: 0;
+            animation: slideInFromTop 1s ease-out 0.5s forwards;
+            padding: 0 2rem;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .hero-slide.active .hero-content {
+            animation: slideInFromTop 1s ease-out 0.5s forwards;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 1rem 2.5rem;
+            border: 2px solid white;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-btn.primary {
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            border-color: #d4af37;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-btn.primary:hover {
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(135deg, #f1c40f 0%, #d4af37 100%);
+        }
+
+        .hero-navigation {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 4;
+        }
+
+        .hero-nav-btn {
+            width: 12px;
+            height: 12px;
+            border: 2px solid white;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero-nav-btn.active,
+        .hero-nav-btn:hover {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .hero-info {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 1) 100%);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .artist-name {
+            font-size: 1.8rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 1.2s both;
+        }
+
+        .gallery-description {
+            font-size: 1.2rem;
+            color: #495057;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 1.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 1.6s both;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            border: 2px solid #2c3e50;
+            background: #2c3e50;
+            color: white;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: #2c3e50;
+        }
+
+        .cta-button.secondary:hover {
+            background: #2c3e50;
+            color: white;
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-main {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #1a1a1a 0%, #2c3e50 100%);
+            position: relative;
+        }
+
+        .gallery-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 4rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pagination-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .pagination-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .pagination-btn.active {
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            border-color: #d4af37;
+            color: #ffffff;
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .pagination-info {
+            color: #bdc3c7;
+            font-size: 1rem;
+            margin: 0 1rem;
+        }
+
+        /* Modern About Section - Dark Theme */
+        .about-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 50%, transparent 100%);
+        }
+
+        .about-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(241, 196, 15, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .about-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .about-subtitle {
+            font-size: 1.4rem;
+            color: #bdc3c7;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .about-story {
+            margin-bottom: 5rem;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e9ecef;
+        }
+
+        .story-heading {
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .story-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .founder-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 350px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37 0%, #f1c40f 100%);
+        }
+
+        .founder-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: url('images/thabs.png') center/cover;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid #d4af37;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .founder-info h4 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .founder-info p {
+            color: #bdc3c7;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .founder-quote {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            font-style: italic;
+            color: #e9ecef;
+            border-left: 4px solid #d4af37;
+            margin-top: 1rem;
+        }
+
+        .mission-vision-modern {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .mv-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .mv-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            color: #d4af37;
+        }
+
+        .mv-title {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .mv-description {
+            color: #bdc3c7;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .services-modern {
+            margin-top: 5rem;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-title {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .services-subtitle {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            font-style: italic;
+        }
+
+        .services-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card-modern {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37 0%, #f1c40f 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card-modern:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card-modern:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            color: #d4af37;
+        }
+
+        .service-name {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-desc {
+            color: #bdc3c7;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .feature-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e9ecef;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-tag.coming-soon {
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            color: white;
+            border: none;
+        }
+
+        /* TikTok Section */
+        .tiktok-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tiktok-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 50%, transparent 100%);
+        }
+
+        .tiktok-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tiktok-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tiktok-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #000000 0%, #ee1d52 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(238, 29, 82, 0.3);
+        }
+
+        .tiktok-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .tiktok-subtitle {
+            font-size: 1.4rem;
+            color: #6c757d;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .tiktok-follow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #000000 0%, #ee1d52 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(238, 29, 82, 0.3);
+        }
+
+        .tiktok-follow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(238, 29, 82, 0.4);
+        }
+
+        .tiktok-icon {
+            font-size: 1.5rem;
+        }
+
+        .tiktok-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tiktok-embed-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tiktok-embed-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #000000 0%, #ee1d52 50%, #69c9d0 100%);
+        }
+
+        .tiktok-embed-wrapper:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .tiktok-placeholder {
+            aspect-ratio: 9/16;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+            text-align: center;
+            border: 2px dashed #dee2e6;
+        }
+
+        .tiktok-placeholder-icon {
+            font-size: 4rem;
+            opacity: 0.5;
+        }
+
+        .tiktok-placeholder-text {
+            color: #6c757d;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .tiktok-placeholder-link {
+            color: #ee1d52;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .tiktok-placeholder-link:hover {
+            color: #000000;
+        }
+
+        .tiktok-cta {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(238, 29, 82, 0.05) 0%, rgba(105, 201, 208, 0.05) 100%);
+            border-radius: 20px;
+            border: 2px solid rgba(238, 29, 82, 0.1);
+        }
+
+        .tiktok-cta-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .tiktok-cta-text {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        /* Modern Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 6rem 2rem 4rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 50%, transparent 100%);
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .contact-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ecf0f1;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .contact-item-modern {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item-modern:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icon-modern {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label-modern {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .contact-value-modern {
+            font-size: 1.1rem;
+            color: #ecf0f1;
+        }
+
+        .contact-link-modern {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link-modern:hover {
+            color: #d4af37;
+        }
+
+        .studio-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .studio-hours-modern {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .studio-title {
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hours-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            color: #ecf0f1;
+            font-weight: 500;
+        }
+
+        .time {
+            color: #bdc3c7;
+            font-size: 0.95rem;
+        }
+
+        .consultation-note {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            text-align: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quick-actions {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .actions-title {
+            font-size: 1.5rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .action-btn.primary {
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .action-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .action-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ecf0f1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .action-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .action-btn.tertiary {
+            background: transparent;
+            color: #bdc3c7;
+            border: 2px solid rgba(189, 195, 199, 0.3);
+        }
+
+        .action-btn.tertiary:hover {
+            background: rgba(189, 195, 199, 0.1);
+            color: #ecf0f1;
+            transform: translateY(-3px);
+        }
+
+        .btn-icon {
+            font-size: 1.1rem;
+        }
+
+        .contact-footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-social-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-social-link.tiktok:hover {
+            background: rgba(238, 29, 82, 0.3);
+            border-color: #ee1d52;
+        }
+
+        .footer-social-link.instagram:hover {
+            background: linear-gradient(45deg, rgba(225, 48, 108, 0.3), rgba(193, 53, 132, 0.3), rgba(131, 58, 180, 0.3));
+            border-color: #e1306c;
+        }
+
+        .footer-social-link.facebook:hover {
+            background: rgba(24, 119, 242, 0.3);
+            border-color: #1877f2;
+        }
+
+        .footer-social-link.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.3);
+            border-color: #25d366;
+        }
+
+        .footer-social-link.email:hover,
+        .footer-social-link.phone:hover {
+            background: rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+
+        .footer-text {
+            color: #bdc3c7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Responsive Design Updates */
+        /* Navigation Styles */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(0px);
+            box-shadow: none;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .main-nav.scrolled .nav-logo {
+            color: #2c3e50;
+            text-shadow: none;
+        }
+
+        .nav-logo-icon {
+            font-size: 1.8rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-nav.scrolled .nav-link {
+            color: #2c3e50;
+            text-shadow: none;
+        }
+
+        .nav-link:hover {
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .nav-link.active {
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            color: white !important;
+            padding: 0.75rem 1.5rem !important;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #f1c40f 0%, #d4af37 100%);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-nav.scrolled .mobile-menu-btn {
+            color: #2c3e50;
+            text-shadow: none;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Sidebar */
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+            transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow-y: auto;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sidebar-header {
+            padding: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar-logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sidebar-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 2rem 0;
+            margin: 0;
+        }
+
+        .sidebar-link {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-left-color: #d4af37;
+            padding-left: 2.5rem;
+        }
+
+        .sidebar-link.active {
+            background: rgba(212, 175, 55, 0.2);
+            border-left-color: #d4af37;
+        }
+
+        .sidebar-cta {
+            margin: 2rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .sidebar-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(212, 175, 55, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .sidebar-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-section {
+                height: 100vh;
+                min-height: 500px;
+            }
+
+            .hero-content {
+                top: 50%;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-btn {
+                padding: 0.8rem 1.8rem;
+                font-size: 0.95rem;
+            }
+
+            .hero-info {
+                padding: 3rem 1.5rem 2rem;
+            }
+            
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .artist-name {
+                font-size: 1.3rem;
+            }
+
+            .gallery-description {
+                font-size: 1rem;
+            }
+            
+            .about-title {
+                font-size: 2.5rem;
+            }
+            
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .mission-vision-modern {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .tiktok-title {
+                font-size: 2.5rem;
+            }
+
+            .tiktok-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .contact-section {
+                padding: 4rem 1rem 3rem;
+            }
+
+            .contact-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-item-modern {
+                padding: 1.5rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .contact-icon-modern {
+                font-size: 2rem;
+                width: 50px;
+                height: 50px;
+            }
+
+            .contact-label-modern {
+                font-size: 0.85rem;
+            }
+
+            .contact-value-modern {
+                font-size: 1rem;
+                word-break: break-word;
+            }
+            
+            .studio-info {
+                gap: 1.5rem;
+            }
+
+            .studio-hours-modern,
+            .quick-actions {
+                padding: 2rem 1.5rem;
+            }
+
+            .studio-title,
+            .actions-title {
+                font-size: 1.3rem;
+            }
+
+            .hours-item {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .day {
+                font-size: 1rem;
+            }
+
+            .time {
+                font-size: 0.9rem;
+            }
+
+            .action-btn {
+                padding: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-social-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .footer-social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .footer-text {
+                font-size: 0.85rem;
+                padding: 0 1rem;
+            }
+            
+            .pagination-controls {
+                gap: 0.5rem;
+            }
+            
+            .pagination-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 200px;
+            }
+
+            .mobile-sidebar {
+                width: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Gallery and Modal Styles */
+        .artwork-frame {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            overflow: hidden;
+        }
+
+        .artwork-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .artwork-frame:hover::before {
+            left: 100%;
+        }
+
+        .artwork-frame:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.2);
+            cursor: pointer;
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+
+        .artwork-frame:active {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+            animation: modalBackdropFade 0.4s ease;
+        }
+
+        @keyframes modalBackdropFade {
+            from {
+                opacity: 0;
+                backdrop-filter: blur(0px);
+            }
+            to {
+                opacity: 1;
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(212, 175, 55, 0.3);
+            transform: scale(0.7) rotateX(10deg);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1) rotateX(0deg);
+            opacity: 1;
+            animation: modalEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalEntrance {
+            0% {
+                transform: scale(0.7) rotateX(10deg) translateY(50px);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05) rotateX(-2deg) translateY(-10px);
+            }
+            100% {
+                transform: scale(1) rotateX(0deg) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 70vh;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f8f9fa;
+            position: relative;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-image.zoomed {
+            cursor: zoom-out;
+            transform: scale(2);
+        }
+
+        .modal-info {
+            padding: 2rem;
+            background: #ffffff;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-medium {
+            font-size: 1.2rem;
+            color: #6c757d;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-dimensions {
+            font-size: 1rem;
+            color: #868e96;
+            margin-bottom: 1rem;
+        }
+
+        .modal-description {
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.6;
+        }
+
+        .modal-controls {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+
+        .modal-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .modal-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.3);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.4s ease;
+        }
+
+        .modal-btn:hover::before {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+
+        .modal-btn:hover {
+            background: #ffffff;
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+        }
+
+        .modal-btn:active {
+            transform: scale(0.95);
+        }
+
+        .navigation-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navigation-arrows::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(241, 196, 15, 0.3));
+            transform: scale(0);
+            transition: transform 0.4s ease;
+            border-radius: 50%;
+        }
+
+        .navigation-arrows:hover::before {
+            transform: scale(1);
+        }
+
+        .navigation-arrows:hover {
+            background: #ffffff;
+            transform: translateY(-50%) scale(1.2);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .nav-prev {
+            left: 1rem;
+            animation: bounceLeft 2s ease-in-out infinite;
+        }
+
+        .nav-next {
+            right: 1rem;
+            animation: bounceRight 2s ease-in-out infinite;
+        }
+
+        @keyframes bounceLeft {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(-5px); }
+        }
+
+        @keyframes bounceRight {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(5px); }
+        }
+
+        .navigation-arrows:hover {
+            animation: none;
+        }
+
+        .thumbnail-strip {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            border-radius: 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active .thumbnail-strip {
+            opacity: 1;
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumbnail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .thumbnail:hover::before {
+            opacity: 1;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.15) translateY(-5px);
+            border-color: #2c3e50;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .thumbnail.active {
+            border-color: #d4af37;
+            transform: scale(1.2) translateY(-8px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+            animation: thumbnailPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes thumbnailPulse {
+            0%, 100% {
+                box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+            }
+            50% {
+                box-shadow: 0 10px 40px rgba(212, 175, 55, 0.8);
+            }
+        }
+
+        /* Gallery Animation */
+        .gallery-grid {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .artwork-frame {
+            animation: slideInGallery 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .artwork-frame:nth-child(1) { animation-delay: 0.1s; }
+        .artwork-frame:nth-child(2) { animation-delay: 0.2s; }
+        .artwork-frame:nth-child(3) { animation-delay: 0.3s; }
+        .artwork-frame:nth-child(4) { animation-delay: 0.4s; }
+        .artwork-frame:nth-child(5) { animation-delay: 0.5s; }
+        .artwork-frame:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideInGallery {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .zoom-indicator {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-image:hover .zoom-indicator {
+            opacity: 1;
+        }
+
+        .artwork-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .artwork-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 50%, rgba(212, 175, 55, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .artwork-frame:hover .artwork-image {
+            transform: scale(1.05);
+            border-color: rgba(212, 175, 55, 0.8);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .artwork-frame:hover .artwork-image::before {
+            opacity: 1;
+        }
+
+        .artwork-info {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .artwork-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .artwork-frame:hover .artwork-title {
+            color: #f1c40f;
+            transform: translateY(-3px);
+            text-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+        }
+
+        .artwork-medium {
+            font-size: 1rem;
+            color: #bdc3c7;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .artwork-frame:hover .artwork-medium {
+            color: #ecf0f1;
+        }
+
+        .artwork-dimensions {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            transition: all 0.3s ease;
+        }
+
+        .artwork-frame:hover .artwork-dimensions {
+            color: #bdc3c7;
+        }
+
+        .gallery-lighting {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0.8) 0%, transparent 100%);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .spotlight {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: spotlightGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes spotlightGlow {
+            0% { 
+                opacity: 0.3; 
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+            }
+            100% { 
+                opacity: 0.8; 
+                transform: translateX(-50%) scale(1.5);
+                box-shadow: 0 0 80px rgba(212, 175, 55, 0.5);
+            }
+        }
+
+        /* Floating particles */
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0) translateX(0);
+                opacity: 0.3;
+            }
+            50% { 
+                transform: translateY(-20px) translateX(10px);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes floatReverse {
+            0%, 100% { 
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.2;
+            }
+            50% { 
+                transform: translateY(-30px) translateX(-15px) rotate(180deg);
+                opacity: 0.6;
+            }
+        }
+
+        .gallery-main::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #d4af37;
+            border-radius: 50%;
+            top: 10%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-title {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .artwork-frame {
+                padding: 1.5rem;
+            }
+            
+            .artwork-image {
+                height: 250px;
+            }
+            
+            .featured-image {
+                height: 300px;
+            }
+        }
+
+        .nav-logo-img {
+    max-height: 52px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.artwork-frame {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.pill {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.pill:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.pill.active {
+  background: linear-gradient(135deg, #d4af37 0%, #f1c40f 100%);
+  border-color: #d4af37;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  background: transparent; /* ✅ no more black bars */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* ----------  MOBILE-FIRST IMAGE AREA  ---------- */
+.modal-image-wrapper{
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+  width:100%; height:100%;
+  padding:1rem; box-sizing:border-box;
+}
+.modal-image{
+  max-width:100%; max-height:80vh; object-fit:contain;
+  border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,.5);
+  transition:transform .3s ease;
+}
+.navigation-arrows{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:50px; height:50px; border:none; border-radius:50%;
+  background:rgba(255,255,255,.9); color:#2c3e50;
+  font-size:1.5rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .3s ease; box-shadow:0 4px 12px rgba(0,0,0,.3);
+  z-index:10;
+}
+.nav-prev{left:1rem;}
+.nav-next{right:1rem;}
+.navigation-arrows:hover{background:#fff; transform:translateY(-50%) scale(1.1); box-shadow:0 6px 20px rgba(212,175,55,.5);}
+
+/* ----------  MOBILE TWEAKS  ---------- */
+@media(max-width:768px){
+  .modal-image{max-height:70vh;}
+  .navigation-arrows{
+    width:44px; height:44px; font-size:1.2rem;
+    background:rgba(0,0,0,.4); color:#fff; backdrop-filter:blur(4px);
+  }
+  .nav-prev{left:.5rem;}
+  .nav-next{right:.5rem;}
+}
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation Bar -->
+  <nav class="main-nav" id="mainNav">
+   <div class="nav-container"><a href="#" class="nav-logo" onclick="scrollToSection('hero'); return false;">
+    <img src="images/white.png" alt="Devine Arts Logo" class="nav-logo-img">
+</a>
+
+    <ul class="nav-menu">
+     <li><a href="#" class="nav-link" onclick="scrollToSection('hero'); return false;">Home</a></li>
+<li><a href="media.html" class="nav-link">Gallery</a></li>
+<li><a href="about.html" class="nav-link">About</a></li>
+<li><a href="#" class="nav-link" onclick="scrollToSection('tiktok'); return false;">Videos</a></li>
+<li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+
+    </ul><button class="mobile-menu-btn" onclick="toggleMobileSidebar()" aria-label="Open menu"> <i class="fas fa-bars"></i> </button>
+   </div>
+  </nav><!-- Mobile Sidebar -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileSidebar()"></div>
+  <aside class="mobile-sidebar" id="mobileSidebar">
+   <div class="sidebar-header">
+    <div class="sidebar-logo">
+    <img src="images/white.png" alt="Devine Arts Logo" class="nav-logo-img">
+</div>
+<button class="sidebar-close" onclick="closeMobileSidebar()" aria-label="Close menu"> <i class="fas fa-times"></i> </button>
+   </div>
+   <ul class="sidebar-menu">
+    <li><a href="#" class="sidebar-link" onclick="scrollToSection('hero'); closeMobileSidebar(); return false;">Home</a></li>
+    <li><a href="media.html" class="sidebar-link" onclick="scrollToSection('gallery'); closeMobileSidebar(); return false;">Gallery</a></li>
+    <li><a href="about.html" class="sidebar-link" onclick="scrollToSection('about'); closeMobileSidebar(); return false;">About</a></li>
+    <li><a href="#" class="sidebar-link" onclick="scrollToSection('tiktok'); closeMobileSidebar(); return false;">Videos</a></li>
+    <li><a href="contact.html" class="sidebar-link" onclick="scrollToSection('contact'); closeMobileSidebar(); return false;">Contact</a></li>
+   </ul><a href="tel:+27687486523" class="sidebar-cta" onclick="closeMobileSidebar()"> <i class="fas fa-phone"></i> Call Now </a>
+   <div class="sidebar-footer">
+    <div class="sidebar-social"><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a> <a href="https://www.instagram.com/devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a> <a href="https://www.facebook.com/lungi08?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a> <a href="https://wa.me/27687486523" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a> <a href="mailto:devinearts01crafts@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a> <a href="tel:+27687486523" class="social-link" title="Phone"><i class="fas fa-phone"></i></a>
+    </div>
+    <p class="sidebar-copyright">© 2024 Devine Arts</p>
+   </div>
+  </aside>
+  <div class="gallery-lighting">
+   <div class="spotlight"></div>
+  </div><!-- Hero Section with Slideshow -->
+
+<!-- MODAL VIEWER  -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content" id="modalContent">
+
+    <!--  TOP BAR  -->
+    <div class="modal-topbar">
+      <span id="modalCounter">1 / 39</span>
+      <button class="modal-btn" onclick="closeModal()" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!--  IMAGE AREA  -->
+    <div class="modal-imgwrap">
+      <img id="modalImage" src="" alt="Artwork" loading="lazy">
+      <!--  prev / next  -->
+      <button class="nav-arrow nav-prev" onclick="previousImage()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nav-arrow nav-next" onclick="nextImage()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!--  META AREA  -->
+    <div class="modal-meta">
+      <h3 id="modalTitle">Title</h3>
+      <p id="modalMedium">Medium</p>
+      <p id="modalDimensions">Dimensions</p>
+      <p id="modalDescription">Description</p>
+    </div>
+
+    <!--  THUMBNAIL STRIP  -->
+    <div class="modal-thumbs" id="thumbnailStrip"></div>
+  </div>
+</div>
+
+  <section class="hero-section" id="hero">
+   <div class="hero-slideshow">
+    <div class="hero-slide active" style="background-image: url('images/wear.jpg');">
+     <div class="hero-overlay"></div>
+     <div class="hero-content">
+      <h1 class="hero-title">Custom Sneaker Art</h1>
+      <p class="hero-subtitle">Transforming footwear into wearable masterpieces</p>
+      <div class="hero-buttons"><button class="hero-btn primary" onclick="scrollToSection('gallery')">Explore Gallery</button> <button class="hero-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+      </div>
+     </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('images/him.jpg');">
+     <div class="hero-overlay"></div>
+     <div class="hero-content">
+      <h1 class="hero-title">Portrait Commissions</h1>
+      <p class="hero-subtitle">Capturing the essence of your loved ones</p>
+      <div class="hero-buttons"><button class="hero-btn primary" onclick="scrollToSection('gallery')">Explore Gallery</button> <button class="hero-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+      </div>
+     </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('images/kids.jpg');">
+     <div class="hero-overlay"></div>
+     <div class="hero-content">
+      <h1 class="hero-title">African Landscapes</h1>
+      <p class="hero-subtitle">Celebrating South African natural beauty</p>
+      <div class="hero-buttons"><button class="hero-btn primary" onclick="scrollToSection('gallery')">Explore Gallery</button> <button class="hero-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+      </div>
+     </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('images/africa.jpg');">
+     <div class="hero-overlay"></div>
+     <div class="hero-content">
+      <h1 class="hero-title">Abstract Art</h1>
+      <p class="hero-subtitle">Bold expressions of color and emotion</p>
+      <div class="hero-buttons"><button class="hero-btn primary" onclick="scrollToSection('gallery')">Explore Gallery</button> <button class="hero-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+      </div>
+     </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('images/woman.jpg');">
+     <div class="hero-overlay"></div>
+     <div class="hero-content">
+      <h1 class="hero-title">Wearable Art</h1>
+      <p class="hero-subtitle">Fashion meets artistic expression</p>
+      <div class="hero-buttons"><button class="hero-btn primary" onclick="scrollToSection('gallery')">Explore Gallery</button> <button class="hero-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+      </div>
+     </div>
+    </div>
+    <div class="hero-slide" style="background-image: url('images/workshop.jpg');">
+     <div class="hero-overlay"></div>
+     <div class="hero-content">
+      <h1 class="hero-title">Creative Workshops</h1>
+      <p class="hero-subtitle">Learn and grow with expert guidance</p>
+      <div class="hero-buttons"><button class="hero-btn primary" onclick="scrollToSection('about')">Learn More</button> <button class="hero-btn" onclick="scrollToSection('contact')">Get In Touch</button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="hero-navigation"><button class="hero-nav-btn active" onclick="goToSlide(0)"></button> <button class="hero-nav-btn" onclick="goToSlide(1)"></button> <button class="hero-nav-btn" onclick="goToSlide(2)"></button> <button class="hero-nav-btn" onclick="goToSlide(3)"></button> <button class="hero-nav-btn" onclick="goToSlide(4)"></button> <button class="hero-nav-btn" onclick="goToSlide(5)"></button>
+   </div>
+  </section>
+ 
+
+<section class="hero-info">
+  <h1 class="gallery-title" id="galleryTitle">Devine Arts and Crafts</h1>
+  <h2 class="artist-name" id="artistName">Founded by Adam Thabane Malefofane</h2>
+  <p class="gallery-description" id="galleryDescription">
+    A proudly South African creative studio dedicated to producing unique, meaningful, and high-quality art that blends traditional artistic skill with modern customization techniques
+  </p>
+  <div class="hero-cta">
+    <a href="about.html" class="cta-button">Learn More</a>
+    <a href="contact.html" class="cta-button secondary">Get In Touch</a>
+  </div>
+</section>
+
+
+
+  <main class="gallery-main" id="gallery">
+   
+   <div class="category-pills" id="categoryPills">
+  <button class="pill active" onclick="filterByCategory('All')">All</button>
+  <button class="pill" onclick="filterByCategory('Artwork')">Artwork</button>
+  <button class="pill" onclick="filterByCategory('Art Handover')">Art Handover</button>
+  <button class="pill" onclick="filterByCategory('Wearable Art')">Wearable Art</button>
+  <button class="pill" onclick="filterByCategory('Art Making')">Art Making</button>
+  <button class="pill" onclick="filterByCategory('Landscape')">Landscape</button>
+</div>
+<div class="gallery-grid" id="galleryGrid"><!-- Artworks will be dynamically loaded here -->
+   </div>
+  </main><!-- Modern About Section -->
+  <section class="about-section" id="about">
+   <div class="about-container">
+    <div class="about-header">
+     <div class="section-badge">
+      About Us
+     </div>
+     <h2 class="about-title">Devine Arts and Crafts</h2>
+     <p class="about-subtitle">Celebrating African Creativity Through Wearable and Visual Art</p>
+    </div>
+    <div class="about-story">
+     <div class="story-content">
+      <div class="story-text">
+       <h3 class="story-heading">Our Story</h3>
+       <p>Devine Arts and Crafts is a proudly South African creative studio founded by <strong>Adam Thabane Malefofane</strong>, dedicated to producing unique, meaningful, and high-quality art. What started as a passion for customized footwear grew into a dynamic brand that now offers portraiture, wearable art, and creative craft solutions.</p>
+       <p>The company blends traditional artistic skill with modern customization techniques, creating art that people can both wear and treasure. From hand-painted shoes and apparel, to personalized portraits, to plans for screen printing and art classes, Devine Arts and Crafts is driven by the vision of making art accessible, functional, and a part of everyday life.</p>
+      </div>
+      <div class="story-visual">
+       <div class="founder-card">
+        <div class="founder-image"></div>
+        <div class="founder-info">
+         <h4>Adam Thabane Malefofane</h4>
+         <p>Founder &amp; Lead Artist</p>
+         <div class="founder-quote">
+          "Art should be lived, worn, and experienced as part of everyday life."
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="mission-vision-modern">
+     <div class="mv-card mission-card-modern">
+      <div class="mv-icon">
+       <i class="fas fa-bullseye"></i>
+      </div>
+      <h3 class="mv-title">Our Mission</h3>
+      <p class="mv-description">To celebrate and promote African creativity and beauty through wearable and visual art, while empowering communities with artistic knowledge and opportunities.</p>
+     </div>
+     <div class="mv-card vision-card-modern">
+      <div class="mv-icon">
+       <i class="fas fa-star"></i>
+      </div>
+      <h3 class="mv-title">Our Vision</h3>
+      <p class="mv-description">To become a leading hub of creativity in South Africa, where art is not only admired but also lived, worn, and experienced.</p>
+     </div>
+    </div>
+    <div class="services-modern">
+     <div class="services-header">
+      <h3 class="services-title">Our Services</h3>
+      <p class="services-subtitle">Bringing your artistic vision to life</p>
+     </div>
+     <div class="services-grid-modern">
+      <div class="service-card-modern">
+       <div class="service-icon">
+        <i class="fas fa-shoe-prints"></i>
+       </div>
+       <div class="service-content">
+        <h4 class="service-name">Shoe Customization &amp; Wearable Art</h4>
+        <p class="service-desc">Transforming footwear and clothing into personalized masterpieces that reflect your unique style and personality.</p>
+        <div class="service-features"><span class="feature-tag">Custom Sneakers</span> <span class="feature-tag">Apparel Art</span> <span class="feature-tag">Personal Style</span>
+        </div>
+       </div>
+      </div>
+      <div class="service-card-modern">
+       <div class="service-icon">
+        <i class="fas fa-paint-brush"></i>
+       </div>
+       <div class="service-content">
+        <h4 class="service-name">Portraiture &amp; Commissioned Artworks</h4>
+        <p class="service-desc">Realistic and expressive portraits for personal, family, and memorial purposes, capturing the essence of your loved ones.</p>
+        <div class="service-features"><span class="feature-tag">Family Portraits</span> <span class="feature-tag">Memorial Art</span> <span class="feature-tag">Custom Commissions</span>
+        </div>
+       </div>
+      </div>
+      <div class="service-card-modern">
+       <div class="service-icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+       </div>
+       <div class="service-content">
+        <h4 class="service-name">Creative Workshops</h4>
+        <p class="service-desc">Teaching and inspiring young artists through comprehensive art classes and creative workshops.</p>
+        <div class="service-features"><span class="feature-tag coming-soon">Coming Soon</span> <span class="feature-tag">Art Classes</span> <span class="feature-tag">Youth Programs</span>
+        </div>
+       </div>
+      </div>
+      <div class="service-card-modern">
+       <div class="service-icon">
+        <i class="fas fa-print"></i>
+       </div>
+       <div class="service-content">
+        <h4 class="service-name">Screen Printing</h4>
+        <p class="service-desc">Custom prints on fabric and products, bringing your designs to life with professional quality.</p>
+        <div class="service-features"><span class="feature-tag coming-soon">Expanding Soon</span> <span class="feature-tag">Custom Prints</span> <span class="feature-tag">Fabric Design</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- TikTok Section -->
+  <section class="tiktok-section" id="tiktok">
+   <div class="tiktok-container">
+    <div class="tiktok-header">
+     <div class="tiktok-badge">
+      <i class="fas fa-video"></i> Watch Our Process
+     </div>
+     <h2 class="tiktok-title">Behind The Art</h2>
+     <p class="tiktok-subtitle">See our creative process come to life on TikTok</p><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="tiktok-follow"> <span class="tiktok-icon"><i class="fab fa-tiktok"></i></span> Follow @devine_arts_and_crafts </a>
+    </div>
+    <div class="tiktok-grid">
+     <div class="tiktok-embed-wrapper" style="max-width: 100%; display: flex; justify-content: center;">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@devine_arts_and_crafts" data-unique-id="devine_arts_and_crafts" data-embed-type="creator" style="max-width: 780px; min-width: 288px; width: 100%;">
+       <section><a target="_blank" href="https://www.tiktok.com/@devine_arts_and_crafts?refer=creator_embed">@devine_arts_and_crafts</a>
+       </section>
+      </blockquote>
+     </div>
+    </div>
+    <div class="tiktok-cta">
+     <h3 class="tiktok-cta-title">Love What You See?</h3>
+     <p class="tiktok-cta-text">Follow us for daily art inspiration, behind-the-scenes content, and exclusive previews of new work!</p><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="tiktok-follow"> <span class="tiktok-icon"><i class="fab fa-tiktok"></i></span> Join Our TikTok Community </a>
+    </div>
+   </div>
+  </section>
+  <script async src="https://www.tiktok.com/embed.js"></script><!-- Modern Contact Section -->
+  <footer class="contact-section" id="contact">
+   <div class="contact-container">
+    <div class="contact-header">
+     <div class="section-badge">
+      Contact
+     </div>
+     <h3 class="contact-title">Get In Touch</h3>
+     <div class="contact-info" id="contactInfo">
+      <p>Ready to bring your artistic vision to life? Contact Devine Arts and Crafts today!</p>
+     </div>
+    </div>
+    <div class="contact-content">
+     <div class="contact-methods">
+      <div class="contact-item-modern">
+       <div class="contact-icon-modern">
+        <i class="fas fa-phone"></i>
+       </div>
+       <div class="contact-details">
+        <div class="contact-label-modern">
+         Phone
+        </div>
+        <div class="contact-value-modern"><a href="tel:+27687486523" class="contact-link-modern">068 748 6523</a>
+        </div>
+       </div>
+      </div>
+      <div class="contact-item-modern">
+       <div class="contact-icon-modern">
+        <i class="fas fa-envelope"></i>
+       </div>
+       <div class="contact-details">
+        <div class="contact-label-modern">
+         Email
+        </div>
+        <div class="contact-value-modern"><a href="mailto:devinearts01crafts@gmail.com" class="contact-link-modern">devinearts01crafts@gmail.com</a>
+        </div>
+       </div>
+      </div>
+      <div class="contact-item-modern">
+       <div class="contact-icon-modern">
+        <i class="fab fa-whatsapp"></i>
+       </div>
+       <div class="contact-details">
+        <div class="contact-label-modern">
+         WhatsApp
+        </div>
+        <div class="contact-value-modern"><a href="https://wa.me/27687486523" target="_blank" rel="noopener noreferrer" class="contact-link-modern">Chat with us</a>
+        </div>
+       </div>
+      </div>
+      <div class="contact-item-modern">
+       <div class="contact-icon-modern">
+        <i class="fas fa-map-marker-alt"></i>
+       </div>
+       <div class="contact-details">
+        <div class="contact-label-modern">
+         Address
+        </div>
+        <div class="contact-value-modern">
+         21 Nadia Street<br>
+         South Africa
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="studio-info">
+      <div class="studio-hours-modern">
+       <h4 class="studio-title">Studio Hours</h4>
+       <div class="hours-grid">
+        <div class="hours-item"><span class="day">Monday - Friday</span> <span class="time">9:00 AM - 5:00 PM</span>
+        </div>
+        <div class="hours-item"><span class="day">Saturday</span> <span class="time">10:00 AM - 3:00 PM</span>
+        </div>
+        <div class="hours-item"><span class="day">Sunday</span> <span class="time">By appointment</span>
+        </div>
+       </div>
+       <div class="consultation-note"><em>Custom consultations available by appointment</em>
+       </div>
+      </div>
+      <div class="quick-actions">
+       <h4 class="actions-title">Quick Actions</h4>
+       <div class="action-buttons"><a href="tel:+27687486523" class="action-btn primary"> <span class="btn-icon"><i class="fas fa-phone"></i></span> Call Now </a> <a href="https://wa.me/27687486523" target="_blank" rel="noopener noreferrer" class="action-btn secondary"> <span class="btn-icon"><i class="fab fa-whatsapp"></i></span> WhatsApp </a> <a href="mailto:devinearts01crafts@gmail.com" class="action-btn tertiary"> <span class="btn-icon"><i class="fas fa-envelope"></i></span> Email Us </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="contact-footer">
+     <div class="footer-divider"></div>
+     <div class="footer-social-links"><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="footer-social-link tiktok" title="TikTok"> <i class="fab fa-tiktok"></i> </a> <a href="https://www.instagram.com/devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="footer-social-link instagram" title="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.facebook.com/lungi08?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="footer-social-link facebook" title="Facebook"> <i class="fab fa-facebook"></i> </a> <a href="https://wa.me/27687486523" target="_blank" rel="noopener noreferrer" class="footer-social-link whatsapp" title="WhatsApp"> <i class="fab fa-whatsapp"></i> </a> <a href="mailto:devinearts01crafts@gmail.com" class="footer-social-link email" title="Email"> <i class="fas fa-envelope"></i> </a> <a href="tel:+27687486523" class="footer-social-link phone" title="Phone"> <i class="fas fa-phone"></i> </a>
+     </div>
+     <p class="footer-text">© 2024 Devine Arts and Crafts. Proudly South African. All rights reserved.</p>
+    </div>
+   </div>
+  </footer><!-- Modal Viewer -->
+  <div class="modal-overlay" id="modalOverlay">
+   <div class="modal-content">
+    <div class="modal-controls"><button class="modal-btn" onclick="toggleZoom()" title="Zoom In/Out"><i class="fas fa-search-plus"></i></button> <button class="modal-btn" onclick="closeModal()" title="Close"><i class="fas fa-times"></i></button>
+    </div><button class="navigation-arrows nav-prev" onclick="previousImage()" title="Previous"><i class="fas fa-chevron-left"></i></button> <button class="navigation-arrows nav-next" onclick="nextImage()" title="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="modal-image-wrapper">
+  <button class="navigation-arrows nav-prev" onclick="previousImage()" title="Previous">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <img class="modal-image" id="modalImage" src="" alt="Artwork" onclick="toggleZoom()" />
+  <button class="navigation-arrows nav-next" onclick="nextImage()" title="Next">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>
+    </div>
+    <div class="modal-info">
+     <h3 class="modal-title" id="modalTitle">Artwork Title</h3>
+     <p class="modal-medium" id="modalMedium">Medium</p>
+     <p class="modal-dimensions" id="modalDimensions">Dimensions</p>
+     <p class="modal-description" id="modalDescription">A masterful piece showcasing the artist's unique vision and technical expertise. This work demonstrates exceptional skill in composition, color theory, and emotional expression.</p>
+    </div>
+   </div>
+   <div class="thumbnail-strip" id="thumbnailStrip"><!-- Thumbnails will be generated by JavaScript -->
+   </div>
+  </div>
+  <script>
+        // Default configuration
+        const defaultConfig = {
+            gallery_title: "Devine Arts and Crafts",
+            artist_name: "Founded by Adam Thabane Malefofane",
+            gallery_description: "A proudly South African creative studio dedicated to producing unique, meaningful, and high-quality art that blends traditional artistic skill with modern customization techniques",
+            contact_info: "Ready to bring your artistic vision to life? Contact Devine Arts and Crafts today!"
+        };
+
+        // Expanded Gallery data with more artworks
+        const artworks = [
+  // Artwork (21 images, 1200x1600)
+  ...Array.from({ length: 21 }, (_, i) => ({
+    image: `images/art${i + 1}.jpg`,
+    title: `Artwork ${i + 1}`,
+    medium: "Mixed Media on Canvas",
+    dimensions: "1200 × 1600px",
+    description: "Original artwork from the Devine Arts collection.",
+    category: "Artwork"
+  })),
+
+  // Art Handover (5 images, 1200x1600)
+  ...Array.from({ length: 5 }, (_, i) => ({
+    image: `images/hand${i + 1}.jpg`,
+    title: `Art Handover ${i + 1}`,
+    medium: "Photography",
+    dimensions: "1200 × 1600px",
+    description: "Moments of clients receiving their commissioned pieces.",
+    category: "Art Handover"
+  })),
+
+  // Wearable Art (5 images, 1200x1600)
+  ...Array.from({ length: 5 }, (_, i) => ({
+    image: `images/wearable${i + 1}.jpg`,
+    title: `Wearable Art ${i + 1}`,
+    medium: "Acrylic on Fabric",
+    dimensions: "1200 × 1600px",
+    description: "Custom-painted clothing and accessories.",
+    category: "Wearable Art"
+  })),
+
+  // Art Making (3 images, 1200x1600)
+  ...Array.from({ length: 3 }, (_, i) => ({
+    image: `images/make${i + 1}.jpg`,
+    title: `Art Making ${i + 1}`,
+    medium: "Process Photography",
+    dimensions: "1200 × 1600px",
+    description: "Behind-the-scenes of the creative process.",
+    category: "Art Making"
+  })),
+
+  // Landscape Mixed (5 images, 1600x1200)
+  ...Array.from({ length: 5 }, (_, i) => ({
+    image: `images/land${i + 1}.jpg`,
+    title: `Landscape ${i + 1}`,
+    medium: "Oil on Canvas",
+    dimensions: "1600 × 1200px",
+    description: "South African landscapes in vibrant color.",
+    category: "Landscape"
+  }))
+];
+
+        let currentImageIndex = 0;
+        let isZoomed = false;
+        let currentPage = 1;
+        const itemsPerPage = 6;
+        const totalPages = Math.ceil(artworks.length / itemsPerPage);
+
+        // Modal functions
+        function openModal(index) {
+            currentImageIndex = index;
+            const modal = document.getElementById('modalOverlay');
+            const modalImage = document.getElementById('modalImage');
+            const artwork = artworks[index];
+            
+            // Set image and info
+            modalImage.src = artwork.image;
+            document.getElementById('modalTitle').textContent = artwork.title;
+            document.getElementById('modalMedium').textContent = artwork.medium;
+            document.getElementById('modalDimensions').textContent = artwork.dimensions;
+            document.getElementById('modalDescription').textContent = artwork.description;
+            
+            // Generate thumbnails
+            generateThumbnails();
+            
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Reset zoom
+            isZoomed = false;
+            modalImage.classList.remove('zoomed');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modalOverlay');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Reset zoom
+            isZoomed = false;
+            document.getElementById('modalImage').classList.remove('zoomed');
+        }
+
+        function toggleZoom() {
+            const modalImage = document.getElementById('modalImage');
+            isZoomed = !isZoomed;
+            
+            if (isZoomed) {
+                modalImage.classList.add('zoomed');
+            } else {
+                modalImage.classList.remove('zoomed');
+            }
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % artworks.length;
+            updateModalContent();
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + artworks.length) % artworks.length;
+            updateModalContent();
+        }
+
+        function updateModalContent() {
+            const modalImage = document.getElementById('modalImage');
+            const artwork = artworks[currentImageIndex];
+            
+            // Smooth transition
+            modalImage.style.opacity = '0.5';
+            
+            setTimeout(() => {
+                modalImage.src = artwork.image;
+                document.getElementById('modalTitle').textContent = artwork.title;
+                document.getElementById('modalMedium').textContent = artwork.medium;
+                document.getElementById('modalDimensions').textContent = artwork.dimensions;
+                document.getElementById('modalDescription').textContent = artwork.description;
+                
+                // Update thumbnails
+                updateThumbnailSelection();
+                
+                modalImage.style.opacity = '1';
+                
+                // Reset zoom
+                isZoomed = false;
+                modalImage.classList.remove('zoomed');
+            }, 150);
+        }
+
+        function generateThumbnails() {
+            const thumbnailStrip = document.getElementById('thumbnailStrip');
+            thumbnailStrip.innerHTML = '';
+            
+            artworks.forEach((artwork, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail';
+                thumbnail.style.backgroundImage = `url('${artwork.image}')`;
+                thumbnail.onclick = () => {
+                    currentImageIndex = index;
+                    updateModalContent();
+                };
+                
+                if (index === currentImageIndex) {
+                    thumbnail.classList.add('active');
+                }
+                
+                thumbnailStrip.appendChild(thumbnail);
+            });
+        }
+
+        function updateThumbnailSelection() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('modalOverlay');
+            if (modal.classList.contains('active')) {
+                switch(e.key) {
+                    case 'ArrowLeft':
+                        previousImage();
+                        break;
+                    case 'ArrowRight':
+                        nextImage();
+                        break;
+                    case 'Escape':
+                        closeModal();
+                        break;
+                    case ' ':
+                        e.preventDefault();
+                        toggleZoom();
+                        break;
+                }
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('modalOverlay').addEventListener('click', (e) => {
+            if (e.target.id === 'modalOverlay') {
+                closeModal();
+            }
+        });
+
+        // Pagination functions
+        function loadGalleryPage(page) {
+            const galleryGrid = document.getElementById('galleryGrid');
+            const startIndex = (page - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageArtworks = artworks.slice(startIndex, endIndex);
+            
+            // Clear current gallery
+            galleryGrid.innerHTML = '';
+            
+            // Add artworks for current page
+            pageArtworks.forEach((artwork, index) => {
+                const actualIndex = startIndex + index;
+                const artworkFrame = document.createElement('div');
+                artworkFrame.className = 'artwork-frame';
+                artworkFrame.onclick = () => openModal(actualIndex);
+                
+                artworkFrame.innerHTML = `
+                    <div class="spotlight"></div>
+                    <img class="artwork-image" src="${artwork.image}" alt="${artwork.title}" loading="lazy" />
+                    <div class="artwork-info">
+                        <h3 class="artwork-title">${artwork.title}</h3>
+                        <p class="artwork-medium">${artwork.medium}</p>
+                        <p class="artwork-dimensions">${artwork.dimensions}</p>
+                    </div>
+                `;
+                
+                galleryGrid.appendChild(artworkFrame);
+            });
+            
+            // Update pagination info
+            updatePaginationControls();
+            
+            // Add animation
+            addGalleryAmbiance();
+        }
+
+        function changePage(direction) {
+            const newPage = currentPage + direction;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                loadGalleryPage(currentPage);
+                
+                // Scroll to top of gallery
+                document.querySelector('.gallery-main').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            }
+        }
+
+        function updatePaginationControls() {
+            const paginationInfo = document.getElementById('paginationInfo');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            paginationInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+            
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages;
+            
+            if (currentPage === 1) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+            
+            if (currentPage === totalPages) {
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+
+        // Add gallery ambiance effects
+        function addGalleryAmbiance() {
+            const frames = document.querySelectorAll('.artwork-frame');
+            frames.forEach((frame, index) => {
+                frame.style.opacity = '0';
+                frame.style.transform = 'translateY(30px)';
+                frame.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    frame.style.opacity = '1';
+                    frame.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        // Hero slideshow functionality
+        let currentSlide = 0;
+        let slideInterval;
+
+        function goToSlide(index) {
+            const slides = document.querySelectorAll('.hero-slide');
+            const navBtns = document.querySelectorAll('.hero-nav-btn');
+            
+            // Remove active class from current slide and nav button
+            slides[currentSlide].classList.remove('active');
+            navBtns[currentSlide].classList.remove('active');
+            
+            // Set new current slide
+            currentSlide = index;
+            
+            // Add active class to new slide and nav button
+            slides[currentSlide].classList.add('active');
+            navBtns[currentSlide].classList.add('active');
+            
+            // Reset auto-advance timer
+            clearInterval(slideInterval);
+            startSlideshow();
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % 6;
+            goToSlide(nextIndex);
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        // Initialize slideshow
+        function initializeSlideshow() {
+            startSlideshow();
+            
+            // Pause slideshow on hover
+            const heroSection = document.querySelector('.hero-section');
+            heroSection.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                startSlideshow();
+            });
+        }
+
+        // Navigation functions
+        function toggleMobileSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        function closeMobileSidebar() {
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const navHeight = document.getElementById('mainNav').offsetHeight;
+                const sectionTop = section.offsetTop - (sectionId === 'hero' ? 0 : navHeight);
+                
+                window.scrollTo({
+                    top: sectionTop,
+                    behavior: 'smooth'
+                });
+                
+                // Update active nav links
+                updateActiveNavLink(sectionId);
+            }
+        }
+
+        function updateActiveNavLink(sectionId) {
+            // Update desktop nav
+            document.querySelectorAll('.nav-link:not(.nav-cta)').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Update mobile sidebar
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to current section link
+            const navLinks = document.querySelectorAll('.nav-link, .sidebar-link');
+            navLinks.forEach(link => {
+                const linkText = link.textContent.toLowerCase().trim();
+                if ((sectionId === 'hero' && linkText === 'home') ||
+                    (sectionId === 'gallery' && linkText === 'gallery') ||
+                    (sectionId === 'about' && linkText === 'about') ||
+                    (sectionId === 'tiktok' && linkText === 'videos') ||
+                    (sectionId === 'contact' && linkText === 'contact')) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Hide/show nav on scroll
+        let lastScrollTop = 0;
+        let scrollTimeout;
+
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            
+            scrollTimeout = setTimeout(() => {
+                const nav = document.getElementById('mainNav');
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Add scrolled class when scrolling past hero
+                if (scrollTop > 100) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+                
+                // Show nav when at top
+                if (scrollTop < 100) {
+                    nav.classList.remove('hidden');
+                    return;
+                }
+                
+                // Hide nav when scrolling down, show when scrolling up
+                if (scrollTop > lastScrollTop && scrollTop > 200) {
+                    nav.classList.add('hidden');
+                } else {
+                    nav.classList.remove('hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+                
+                // Update active section based on scroll position
+                updateActiveSection();
+            }, 100);
+        });
+
+        function updateActiveSection() {
+            const sections = ['hero', 'gallery', 'about', 'tiktok', 'contact'];
+            const navHeight = document.getElementById('mainNav').offsetHeight;
+            const scrollPosition = window.scrollY + navHeight + 100;
+            
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i]);
+                if (section && section.offsetTop <= scrollPosition) {
+                    updateActiveNavLink(sections[i]);
+                    break;
+                }
+            }
+        }
+
+        // Close sidebar on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileSidebar();
+            }
+        });
+
+        // Initialize gallery experience
+        window.addEventListener('load', () => {
+            filterByCategory('All');
+            initializeSlideshow();
+            updateActiveNavLink('hero');
+        });
+
+        // Element SDK implementation
+        async function onConfigChange(config) {
+            const galleryTitle = config.gallery_title || defaultConfig.gallery_title;
+            const artistName = config.artist_name || defaultConfig.artist_name;
+            const galleryDescription = config.gallery_description || defaultConfig.gallery_description;
+            const contactInfo = config.contact_info || defaultConfig.contact_info;
+
+            document.getElementById('galleryTitle').textContent = galleryTitle;
+            document.getElementById('artistName').textContent = artistName;
+            document.getElementById('galleryDescription').textContent = galleryDescription;
+            
+            // Handle multi-line contact info
+            const contactElement = document.getElementById('contactInfo');
+            contactElement.innerHTML = contactInfo.split('\n').map(line => `<p>${line}</p>`).join('');
+        }
+
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["gallery_title", config.gallery_title || defaultConfig.gallery_title],
+                ["artist_name", config.artist_name || defaultConfig.artist_name],
+                ["gallery_description", config.gallery_description || defaultConfig.gallery_description],
+                ["contact_info", config.contact_info || defaultConfig.contact_info]
+            ]);
+        }
+
+
+let currentCategory = 'All';
+
+function filterByCategory(category) {
+  currentCategory = category;
+
+  // Update active pill
+  document.querySelectorAll('.pill').forEach(pill => {
+    pill.classList.toggle('active', pill.textContent.trim() === category);
+  });
+
+  // Filter artworks
+  const filtered = category === 'All'
+    ? artworks
+    : artworks.filter(art => art.category === category);
+
+  renderGallery(filtered);
+}
+
+function renderGallery(items) {
+  const galleryGrid = document.getElementById('galleryGrid');
+  galleryGrid.innerHTML = '';
+
+  items.forEach((artwork, index) => {
+    const frame = document.createElement('div');
+    frame.className = 'artwork-frame';
+    frame.onclick = () => openModal(artworks.indexOf(artwork));
+
+    frame.innerHTML = `
+      <img class="artwork-image" src="${artwork.image}" alt="${artwork.title}" loading="lazy" />
+      <div class="artwork-info">
+        <h3 class="artwork-title">${artwork.title}</h3>
+        <p class="artwork-medium">${artwork.medium}</p>
+        <p class="artwork-dimensions">${artwork.dimensions}</p>
+      </div>
+    `;
+
+    galleryGrid.appendChild(frame);
+  });
+}
+
+
+
+        // Initialize Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ </body>
+</html>
