@@ -1730,19 +1730,77 @@
             }
         }
 
-        .modal-content {
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(212, 175, 55, 0.3);
-            transform: scale(0.7) rotateX(10deg);
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            opacity: 0;
-            border: 2px solid rgba(212, 175, 55, 0.3);
-        }
+
+
+        /* ---------- MODAL VIEWER - CONSOLIDATED ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(212, 175, 55, 0.3);
+  transform: scale(0.7) rotateX(10deg);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 0;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1) rotateX(0deg);
+  opacity: 1;
+}
+
+.modal-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.95) 100%);
+}
+
+.modal-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.modal-image.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+
+        
 
         .modal-overlay.active .modal-content {
             transform: scale(1) rotateX(0deg);
@@ -1764,22 +1822,7 @@
             }
         }
 
-        .modal-image {
-            width: 100%;
-            height: 70vh;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: #f8f9fa;
-            position: relative;
-            cursor: zoom-in;
-            transition: transform 0.3s ease;
-        }
-
-        .modal-image.zoomed {
-            cursor: zoom-out;
-            transform: scale(2);
-        }
+        
 
         .modal-info {
             padding: 2rem;
@@ -2047,19 +2090,7 @@
             opacity: 1;
         }
 
-        .artwork-image {
-            width: 100%;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s ease;
-        }
+        
 
         .artwork-image::before {
             content: '';
@@ -2307,17 +2338,8 @@
 
 
 /* ----------  MOBILE-FIRST IMAGE AREA  ---------- */
-.modal-image-wrapper{
-  position:relative;
-  display:flex; align-items:center; justify-content:center;
-  width:100%; height:100%;
-  padding:1rem; box-sizing:border-box;
-}
-.modal-image{
-  max-width:100%; max-height:80vh; object-fit:contain;
-  border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,.5);
-  transition:transform .3s ease;
-}
+
+
 .navigation-arrows{
   position:absolute; top:50%; transform:translateY(-50%);
   width:50px; height:50px; border:none; border-radius:50%;
@@ -2340,6 +2362,37 @@
   }
   .nav-prev{left:.5rem;}
   .nav-next{right:.5rem;}
+}
+
+
+
+/* ---------- MODAL IMAGE - FINAL CLEAN VERSION ---------- */
+.modal-imgwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.95) 100%);
+}
+
+#modalImage {
+  max-width: 90vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+#modalImage.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
 }
     </style>
   <style>@view-transition { navigation: auto; }</style>
@@ -2387,42 +2440,44 @@
    <div class="spotlight"></div>
   </div><!-- Hero Section with Slideshow -->
 
-<!-- MODAL VIEWER  -->
+<!-- MODAL VIEWER -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-content" id="modalContent">
-
-    <!--  TOP BAR  -->
-    <div class="modal-topbar">
-      <span id="modalCounter">1 / 39</span>
+    
+    <!-- Controls (Close + Counter) -->
+    <div class="modal-controls">
+      <span id="modalCounter" style="color:#2c3e50;font-weight:600;">1 / 39</span>
       <button class="modal-btn" onclick="closeModal()" aria-label="Close">
         <i class="fas fa-times"></i>
       </button>
     </div>
 
-    <!--  IMAGE AREA  -->
-    <div class="modal-imgwrap">
-      <img id="modalImage" src="" alt="Artwork" loading="lazy">
-      <!--  prev / next  -->
-      <button class="nav-arrow nav-prev" onclick="previousImage()">
+    <!-- Image area -->
+    <div class="modal-image-wrapper">
+      <img id="modalImage" class="modal-image" src="" alt="Artwork" loading="lazy">
+      
+      <!-- Navigation arrows -->
+      <button class="navigation-arrows nav-prev" onclick="previousImage()">
         <i class="fas fa-chevron-left"></i>
       </button>
-      <button class="nav-arrow nav-next" onclick="nextImage()">
+      <button class="navigation-arrows nav-next" onclick="nextImage()">
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>
 
-    <!--  META AREA  -->
-    <div class="modal-meta">
-      <h3 id="modalTitle">Title</h3>
-      <p id="modalMedium">Medium</p>
-      <p id="modalDimensions">Dimensions</p>
-      <p id="modalDescription">Description</p>
+    <!-- Meta / Info area -->
+    <div class="modal-info">
+      <h3 class="modal-title" id="modalTitle">Title</h3>
+      <p class="modal-medium" id="modalMedium">Medium</p>
+      <p class="modal-dimensions" id="modalDimensions">Dimensions</p>
+      <p class="modal-description" id="modalDescription">Description</p>
     </div>
 
-    <!--  THUMBNAIL STRIP  -->
-    <div class="modal-thumbs" id="thumbnailStrip"></div>
+    <!-- Thumbnails -->
+    <div class="thumbnail-strip" id="thumbnailStrip"></div>
   </div>
 </div>
+
 
   <section class="hero-section" id="hero">
    <div class="hero-slideshow">
