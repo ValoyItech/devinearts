@@ -1010,7 +1010,7 @@
     <div class="sidebar-social-title">
      Follow Us
     </div>
-    <div class="sidebar-social-links"><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a> <a href="https://www.instagram.com/devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.facebook.com/lungi08?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="Facebook"> <i class="fab fa-facebook"></i> </a> <a href="#" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+    <div class="sidebar-social-links"><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a> <a href="https://www.instagram.com/divine_creatives1?igsh=ZTl6dXZzMWVnMDEw" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.facebook.com/lungi08?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="Facebook"> <i class="fab fa-facebook"></i> </a> <a href="https://www.linkedin.com/in/thabane-adam-malefofane-018939373/" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="YouTube"> <i class="fab fa-linkedin"></i> </a>
     </div>
    </div>
    <div class="sidebar-contact">
@@ -1075,7 +1075,7 @@
        </div>
       </div>
      </div>
-     <div class="social-links"><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a> <a href="https://www.instagram.com/devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.facebook.com/lungi08?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"> <i class="fab fa-facebook"></i> </a> <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a>
+     <div class="social-links"><a href="https://www.tiktok.com/@devine_arts_and_crafts" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"> <i class="fab fa-tiktok"></i> </a> <a href="https://www.instagram.com/divine_creatives1?igsh=ZTl6dXZzMWVnMDEw" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> <a href="https://www.facebook.com/lungi08?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"> <i class="fab fa-facebook"></i> </a> <a href="https://www.linkedin.com/in/thabane-adam-malefofane-018939373/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"> <i class="fab fa-linkedin"></i> </a>
      </div>
     </div><!-- Contact Form -->
     <div class="contact-form-wrapper">
@@ -1084,9 +1084,9 @@
       <p class="form-description" id="formDescription">Fill out the form below and we'll get back to you as soon as possible.</p>
      </div>
      <form id="contactForm">
-      <div class="form-group"><label for="name" class="form-label">Your Name *</label> <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+      <div class="form-group"><label for="name" class="form-label">Your Name *</label> <input type="text" id="name" name="name" class="form-input" placeholder="Adam Thabane" required>
       </div>
-      <div class="form-group"><label for="email" class="form-label">Email Address *</label> <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+      <div class="form-group"><label for="email" class="form-label">Email Address *</label> <input type="email" id="email" name="email" class="form-input" placeholder="adam@example.com" required>
       </div>
       <div class="form-group"><label for="phone" class="form-label">Phone Number</label> <input type="tel" id="phone" name="phone" class="form-input" placeholder="+27 123 456 789">
       </div>
@@ -1172,73 +1172,103 @@
         const submitBtn = document.getElementById('submitBtn');
         const errorMessage = document.getElementById('errorMessage');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+(function () {
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const successMessageEl = document.getElementById('successMessage');
+  const successTextEl = document.getElementById('successText');
+  const errorMessageEl = document.getElementById('errorMessage');
+  const errorTextEl = document.getElementById('errorText');
 
-            // Initialize SDK if not already done
-            if (!isInitialized) {
-                await initializeDataSdk();
-            }
+  // Target WhatsApp number in international numeric format (no + or dashes)
+  const waNumber = '27687486523'; // +27 68 748 6523
 
-            // Show loading state
-            submitBtn.disabled = true;
-            submitBtn.classList.add('loading');
-            errorMessage.classList.remove('show');
+  // Utility to show / hide UI messages
+  function showSuccess(msg) {
+    successTextEl.textContent = msg || 'Message prepared. Opening WhatsApp...';
+    successMessageEl.classList.add('show');
+    errorMessageEl.classList.remove('show');
+  }
+  function showError(msg) {
+    errorTextEl.textContent = msg || 'Something went wrong. Please try again.';
+    errorMessageEl.classList.add('show');
+    successMessageEl.classList.remove('show');
+  }
 
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value || 'Not provided',
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
-            };
+  // Basic client-side validation for required fields
+  function validateForm(data) {
+    if (!data.name || data.name.trim().length < 2) return 'Please enter your name.';
+    if (!data.email || !/^\S+@\S+\.\S+$/.test(data.email)) return 'Please enter a valid email address.';
+    if (!data.service || data.service.trim() === '') return 'Please select a service.';
+    if (!data.message || data.message.trim().length < 5) return 'Please enter your message (at least 5 characters).';
+    return null;
+  }
 
-            // Submit to Data SDK
-            if (window.dataSdk && isInitialized) {
-                const result = await window.dataSdk.create(formData);
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-                if (result.isOk) {
-                    // Show success message
-                    const successMsg = window.elementSdk?.config?.success_message || defaultConfig.success_message;
-                    document.getElementById('successText').textContent = successMsg;
-                    document.getElementById('successMessage').classList.add('show');
-                    
-                    // Create WhatsApp message
-                    const whatsappMessage = `*New Contact Form Submission*%0A%0A` +
-                        `*Name:* ${encodeURIComponent(formData.name)}%0A` +
-                        `*Email:* ${encodeURIComponent(formData.email)}%0A` +
-                        `*Phone:* ${encodeURIComponent(formData.phone)}%0A` +
-                        `*Service:* ${encodeURIComponent(formData.service)}%0A%0A` +
-                        `*Message:*%0A${encodeURIComponent(formData.message)}`;
-                    
-                    // Open WhatsApp in new tab
-                    const whatsappUrl = `https://wa.me/27687486523?text=${whatsappMessage}`;
-                    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-                    
-                    // Reset form
-                    contactForm.reset();
+    // UI loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+    errorMessageEl.classList.remove('show');
+    successMessageEl.classList.remove('show');
 
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        document.getElementById('successMessage').classList.remove('show');
-                    }, 5000);
-                } else {
-                    // Show error message
-                    errorMessage.classList.add('show');
-                    document.getElementById('errorText').textContent = 'Failed to send message. Please try again or contact us directly.';
-                }
-            } else {
-                // SDK not available
-                errorMessage.classList.add('show');
-                document.getElementById('errorText').textContent = 'Service unavailable. Please contact us directly via phone or email.';
-            }
+    // Collect values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim() || 'Not provided';
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
 
-            // Remove loading state
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('loading');
-        });
+    const formData = { name, email, phone, service, message };
+
+    // Validate
+    const validationError = validateForm(formData);
+    if (validationError) {
+      showError(validationError);
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+      return;
+    }
+
+    // Build WhatsApp text (plain, with line breaks). We'll use encodeURIComponent for safety.
+    const waText =
+      `*New Contact Form Submission*%0A%0A` +
+      `*Name:* ${encodeURIComponent(name)}%0A` +
+      `*Email:* ${encodeURIComponent(email)}%0A` +
+      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+      `*Service:* ${encodeURIComponent(service)}%0A%0A` +
+      `*Message:*%0A${encodeURIComponent(message)}`;
+
+    // wa.me URL (opens WhatsApp app on mobile or WhatsApp Web on desktop)
+    const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
+
+    // Inform the user and open WhatsApp
+    try {
+      showSuccess('Opening WhatsApp — please send the message from the app/window that opens.');
+      // Open in new tab/window (will open app on mobile)
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+      // Reset the form (optional delay so user sees success text)
+      setTimeout(() => {
+        contactForm.reset();
+      }, 400);
+
+      // Hide success message after a few seconds (optional)
+      setTimeout(() => {
+        successMessageEl.classList.remove('show');
+      }, 6000);
+
+    } catch (err) {
+      console.error('WhatsApp open error:', err);
+      showError('Could not open WhatsApp. Please contact us directly at +27 68 748 6523.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+    }
+  });
+})();
+
 
         // Element SDK implementation
         async function onConfigChange(config) {
